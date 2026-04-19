@@ -1,6 +1,9 @@
 #define __SYSCALL_LL_E(x) (x)
 #define __SYSCALL_LL_O(x) (x)
 
+#include "glenda/ape.h"
+
+/*
 #define __asm_syscall(...) \
 	__asm__ __volatile__ ("ecall\n\t" \
 	: "=r"(a0) : __VA_ARGS__ : "memory"); \
@@ -69,6 +72,7 @@ static inline long __syscall6(long n, long a, long b, long c, long d, long e, lo
 	register long a5 __asm__("a5") = f;
 	__asm_syscall("r"(a7), "0"(a0), "r"(a1), "r"(a2), "r"(a3), "r"(a4), "r"(a5))
 }
+*/
 
 #define VDSO_USEFUL
 /* We don't have a clock_gettime function.
